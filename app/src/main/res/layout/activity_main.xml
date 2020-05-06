@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
 <!-- Left Side Views -->
+
     <TextView
         android:id="@+id/textView_base"
         android:layout_width="0dp"
@@ -34,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_base" />
 
     <TextView
-        android:id="@+id/textView_total"
+        android:id="@+id/textView_totalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -42,10 +43,10 @@
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_base"
-        app:layout_constraintTop_toBottomOf="@+id/textView_tip" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_tipText" />
 
     <TextView
-        android:id="@+id/textView_tip"
+        android:id="@+id/textView_tipText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -65,4 +66,33 @@
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/textView_base"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_base" />
+
+    <SeekBar
+        android:id="@+id/seekBar_tipPercent"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_percent"
+        app:layout_constraintStart_toEndOf="@+id/textView_percent"
+        app:layout_constraintTop_toTopOf="@+id/textView_percent" />
+
+    <TextView
+        android:id="@+id/textView_tipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_tipText"
+        app:layout_constraintStart_toEndOf="@+id/textView_tipText"
+        tools:text="3.14" />
+
+    <TextView
+        android:id="@+id/textView_totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_totalText"
+        app:layout_constraintStart_toEndOf="@+id/textView_totalText"
+        tools:text="42" />
 </androidx.constraintlayout.widget.ConstraintLayout>
