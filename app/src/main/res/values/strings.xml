@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Tippy</string>
+    <string name="base_amount">Base Amount</string>
+    <string name="percentage_DEF">15%</string>
+    <string name="total">Total</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="percent">Percent</string>
+    <string name="emoji">🥰</string>
+    <string name="with_by_www_abunayla_com">With ❤️️ by www.AbuNayla.com</string>
 </resources>
