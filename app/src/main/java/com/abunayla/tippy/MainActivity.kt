@@ -26,8 +26,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        editText_baseAmount.requestFocus()
         seekBar_tipPercent.progress = INIT_PERCENT_VALUE
-        textView_percent.text = "$INIT_PERCENT_VALUE%"
+        textView_percent.text = INIT_PERCENT_VALUE.toString() + "%"
         updateEmoji(INIT_PERCENT_VALUE)
 
 
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 //Log.i(TAG,"OnProgressChanged $progress")
 
 
-                textView_percent.text = "$progress%"
+                textView_percent.text = progress.toString() + "%"
                 computeTipAndTotal()
 
                 updateEmoji(progress)
@@ -47,8 +48,8 @@ class MainActivity : AppCompatActivity() {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                if(seekBar_tipPercent.progress < 2) {
-                    seekBar_tipPercent.progress = 1
+                if(seekBar_tipPercent.progress < 4) {
+                    seekBar_tipPercent.progress = 3
                 }
             }
         })// seekBar_tipPercent.setOnSeekBarChangeListener
@@ -81,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     private fun computeTipAndTotal() {
         if (editText_baseAmount.text.isEmpty()){
             textView_tipAmount.text =""
-            textView_totalAmount.text = ""
+            textView_totalAmount.text = "0"
             return
         }
 
